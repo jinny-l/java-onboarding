@@ -1,5 +1,7 @@
 package onboarding.problem1;
 
+import java.util.List;
+
 public enum BookInfo {
 
     MIN_PAGE(3),
@@ -13,5 +15,9 @@ public enum BookInfo {
 
     public int getPageNumber() {
         return pageNumber;
+    }
+
+    public static boolean validate(List<Integer> pages) {
+        return Validator.validateBook(pages);
     }
 }

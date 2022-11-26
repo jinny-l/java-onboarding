@@ -1,5 +1,7 @@
 package onboarding.problem1;
 
+import java.util.List;
+
 public enum PagesInfo {
 
     LEFT_PAGE(0),
@@ -14,4 +16,9 @@ public enum PagesInfo {
     public int getIndex() {
         return index;
     }
+
+    public static boolean validate(List<Integer> pages) {
+        return Validator.validatePages(pages);
+    }
+
 }
